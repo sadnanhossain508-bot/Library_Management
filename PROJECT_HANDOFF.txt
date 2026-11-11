@@ -1,0 +1,34 @@
+LIBRARYSPACE PROJECT HANDOFF
+
+Project: Library Management System (DBMS Lab)
+Stack: PHP 8+, MySQL/MariaDB, XAMPP, Bootstrap 5, HTML/CSS/JavaScript.
+Expected local folder: C:\\xampp\\htdocs\\library_management_system
+Base URL: /library_management_system
+
+IMPORTANT USER REQUIREMENTS
+1. Premium, polished, luxurious navy + warm champagne/gold + teal visual theme.
+2. Separate Student and Admin login portals.
+3. Students can self-register; status is PENDING until Admin approves.
+4. Admin can also create student accounts. Admin-created accounts are ACTIVE with a generated temporary password. Student must change it on first login.
+5. Admin can disable accounts and reset student passwords; reset requires a password change on next login.
+6. Book title must be unique. Adding an existing title again is rejected.
+7. ISBN/catalog identifier is generated automatically and unique. It is an internal catalog identifier, not a publisher-issued ISBN.
+8. Admin enters initial physical quantity when adding a new title. Each physical copy gets a unique barcode.
+9. Admin can increase/decrease stock for an existing title. Only AVAILABLE copies can be removed; issued/damaged/lost copies are protected.
+10. Student profile must not display PHP warnings for blank or NULL student_no, phone or department.
+
+DATABASE UPDATE FOR AN EXISTING DATABASE
+- Keep a backup first.
+- Import database/add_project_features.sql once. This adds users.must_change_password.
+- If the earlier cover-image migration has NOT been run, also import database/add_book_cover_column.sql once.
+- DO NOT import database/library_management_system.sql into an existing database: it drops and recreates project tables.
+
+INSTALL / UPDATE
+- Back up the current project folder.
+- Extract this ZIP so the project folder is library_management_system under htdocs.
+- Copy the working config/config.php from the existing project into the new project if MySQL credentials were customized.
+- Preserve the existing database and import only the needed one-time migrations above.
+- Open http://localhost/library_management_system/.
+
+VALIDATION
+All PHP files passed php -l syntax checks. This is not an end-to-end XAMPP/MySQL browser test; run the workflows locally before the presentation.

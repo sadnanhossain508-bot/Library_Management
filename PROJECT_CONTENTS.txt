@@ -1,0 +1,26 @@
+LIBRARYSPACE — LIBRARY MANAGEMENT SYSTEM
+
+Updated premium UI: midnight navy, champagne gold and teal palette; responsive sidebar and refined public landing page.
+
+Student portal:
+- Student self-registration (pending approval)
+- Browse/search books, reservations, borrowed books, fines and profile
+- Safe profile editing for nullable student ID / phone / department
+- Change password
+
+Admin portal:
+- Dashboard and reports
+- Add book title with initial quantity and optional cover image
+- Automatic unique internal catalog ISBN/code and unique copy barcodes
+- Duplicate title prevention; stock increase/decrease for existing titles
+- Categories, authors, student accounts, copies, issue/return, fines, reservations, settings
+- Admin-created student accounts with temporary password and forced first-login password change
+- Password reset, account approval and disable/enable
+
+Database:
+- library_management_system.sql for fresh install
+- add_book_cover_column.sql for existing database if not already applied
+- add_project_features.sql for existing database (run once)
+- extra_queries.sql and reset_admin_password.sql
+
+Documentation: README.md and PROJECT_HANDOFF.txt
